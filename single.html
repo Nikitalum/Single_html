@@ -1,23 +1,94 @@
+<head>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav,
+  section {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  
+  nav > ul {
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav > ul > li {
+    margin: 16px;
+    list-style-type: none;
+  }
+  
+  nav > ul > li > a {
+    color: #232323;
+    font: 400 18px Sans-serif;
+    text-decoration: none;
+  }
+  
+  nav > ul > li > a:hover {
+    text-decoration: underline;
+  }
+  
+  section {
+    height: 100vh;
+    display: none;
+    background: #fff;
+    overflow: auto;
+  }
+  
+  section#one {
+    display: flex;
+  }
+  
+  section:target ~ #one {
+    display: none;
+  }
+  
+  section:target {
+    display: flex;
+  }
+  
+  section > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #232323;
+    font: 800 32px Sans-serif;
+    opacity: .2;
+  }  
+    </style>
+</head>
 <main> 
 
     <section id="one">
     <span>Page 1</span>
+    <a>Информация первой страницы</a>
     </section> 
     
     <section id="two">
     <span>Page 2</span>
+    <a>Информация второй страницы</a>
     </section> 
     
     <section id="three">
     <span>Page 3</span>
+    <a>Информация третьей страницы</a>
     </section>
     
      <section id="four">
     <span>Page 4</span>
+    <a>Информация четвертой страницы</a>
     </section>
     
      <section id="five">
     <span>Page 5</span>
+    <a>Информация пятой страницы</a>
     </section>
     
      </main> 
