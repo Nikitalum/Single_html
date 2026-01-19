@@ -1,4 +1,5 @@
 <head>
+    <meta charset="UTF-8">
     <title>Таблица абонентов</title>
     <style>
     * {
@@ -14,8 +15,9 @@
   }
   
   nav2 {
-    width: 50%;
+    width: 100%;
     height: 30px;
+    font-size: 14px;   
     position: fixed;
     top: 20px;
     display: flex;
@@ -79,6 +81,36 @@
     opacity: 0.15;
 
   }  
+    table {
+    width:95%;
+    font-size: 12px;
+    }
+
+    input {
+    width:40%;
+    height: 20px; 
+    font-size: 12px;   
+    }
+  @media only screen and (max-device-width: 480px) {
+    section {
+    top: 90px;
+    }
+    table {
+    width:100%;
+    font-size: 32px;
+    }
+    nav2 {
+    width:100%;
+    height: 70px; 
+    font-size: 32px;   
+    }
+    input {
+    width:40%;
+    height: 50px; 
+    font-size: 28px;   
+    }
+  }
+
     </style>
 </head>
 <main> 
@@ -103,12 +135,9 @@ function tableSearch() {
     }
 }
 </script>
-    <caption>
-    <div><h3>Справочник абонентов</h3></div>
-    </caption>
     <section id="one">
     <nav2><h4>Поиск по таблице</h4><input class="form-control" type="text" placeholder="Фамилия или телефон" id="search-text" onkeyup="tableSearch()"> </nav2>
-    <table class="table table-striped" id="info-table" style="height: 25px", border="1", width="50%", line-height=14px><caption>Информация об абонентах</caption>
+    <table class="table table-striped" id="info-table" , border="1"><caption>Информация об абонентах</caption>
         <tr >
             <td>
                 20-00
