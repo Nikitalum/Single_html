@@ -7,8 +7,19 @@
     padding: 0;
   }
   
-  nav,
-  section {
+  nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    font: 400 26px Sans-serif;
+    top: 50px;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+    section {
     width: 100%;
     position: absolute;
     top: 0;
@@ -24,7 +35,7 @@
     justify-content: center;
     z-index: 10;
     gap: 20px;
-    background: rgba(30,100,255,0.5);
+    background: rgba(80,150,255,0.7);
     align-items: center;
   }
   
@@ -42,7 +53,6 @@
   
   nav > ul > li > a {
     color: #232323;
-    font: 400 38px Sans-serif;
     text-decoration: none;
   }
   
@@ -51,20 +61,12 @@
   }
   
   section {
-    top:60px;
-    display: none;
+    top:110px;
+    display: flex;
     background: #fff;
     justify-content:  center;
     align-items: center;
     overflow: auto;
-  }
-  
-  section#one {
-    display: flex;
-  }
-  
-  section:target ~ #one {
-    display: none;
   }
   
   section:target {
@@ -93,11 +95,16 @@
     }
   @media only screen and (max-device-width: 480px) {
     section {
-    top: 90px;
+    top: 140px;
     }
     table {
     width:100%;
     font-size: 32px;
+    }
+    nav {
+    width:100%;
+    top: 90px;
+    font-size: 32px;   
     }
     nav2 {
     width:100%;
@@ -135,10 +142,11 @@ function tableSearch() {
     }
 }
 </script>
-    <section id="one">
+    <section>
     <nav2><h4>Поиск по таблице</h4><input class="form-control" type="text" placeholder="Фамилия или телефон" id="search-text" onkeyup="tableSearch()"> </nav2>
     <table class="table table-striped" id="info-table" , border="1"><caption>Информация об абонентах</caption>
-        <tr >
+        <section>
+        <tr id="one">
             <td>
                 20-00
             </td>
@@ -149,6 +157,7 @@ function tableSearch() {
                 Индустриальная 64
             </td>
         </tr>
+        </section>
         <tr>
             <td>
                 20-01
@@ -261,7 +270,7 @@ function tableSearch() {
         </tr>
 
     
-        <tr>
+        <tr id="two">
             <td>
                 21-00
             </td>
@@ -384,7 +393,7 @@ function tableSearch() {
         </tr>
 
     
-        <tr >
+        <tr id="three">
             <td>
                 22-00
             </td>
@@ -517,7 +526,7 @@ function tableSearch() {
                 Индустриальная 64
             </td>
         </tr>
-        <tr>
+        <tr id="four">
             <td>
                 23-01
             </td>
@@ -628,7 +637,7 @@ function tableSearch() {
             </td>
         </tr>
     
-        <tr >
+        <tr id="five">
             <td>
                 24-00
             </td>
@@ -650,7 +659,7 @@ function tableSearch() {
                 Почтовая 87
             </td>
         </tr>
-                <tr>
+            <tr>
             <td>
                 24-02
             </td>
@@ -749,7 +758,122 @@ function tableSearch() {
                 Почтовая 80
             </td>
         </tr>
+        <tr>
+            <td>
+                24-11
+            </td>
+            <td>
+                Адрианов Максим
+            </td>
+            <td>
+                Почтовая 87
+            </td>
+        </tr>
+            <tr>
+            <td>
+                24-12
+            </td>
+            <td>
+                Бдрианов Максим
+            </td>
+            <td>
+                Почтовая 82
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-13
+            </td>
+            <td>
+                Вдрианов Максим
+            </td>
+            <td>
+                Почтовая 81
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-14
+            </td>
+            <td>
+                Гдрианов Максим
+            </td>
+            <td>
+                Почтовая 80
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-15
+            </td>
+            <td>
+                Ддрианов Максим
+            </td>
+            <td>
+                Почтовая 83
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-16
+            </td>
+            <td>
+                Едрианов Максим
+            </td>
+            <td>
+                Почтовая 89
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-17
+            </td>
+            <td>
+                Ёдрианов Максим
+            </td>
+            <td>
+                Почтовая 88
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-18
+            </td>
+            <td>
+                Жадрианов Максим
+            </td>
+            <td>
+                Почтовая 82
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-19
+            </td>
+            <td>
+                Зудрианов Максим
+            </td>
+            <td>
+                Почтовая 84
+            </td>
+        </tr>
+                <tr>
+            <td>
+                24-20
+            </td>
+            <td>
+                Идрианов Максим
+            </td>
+            <td>
+                Почтовая 80
+            </td>
+        </tr>
     </table>
     </section>   
+    <nav> 
+    <ul> 
+    <li><a href="#one">20</a></li> <li><a href="#two">21</a></li> <li><a href="#three">22</a></li> <li><a href="#four">23</a></li> <li><a href="#five">24</a></li> 
+    </ul> 
+    </nav>
 </main> 
 
