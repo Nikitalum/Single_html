@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
   }
-  
+    ::-webkit-scrollbar{width:2px;height:2px;}
+    ::-webkit-scrollbar-button{width:2px;height:2px;}
   nav {
     width: 100%;
     height: 60px;
@@ -19,10 +20,58 @@
     align-items: center;
 
   }
+div{
+  box-sizing:border-box;
+}
+.horizontal-scroll-wrapper{
+  height:130%;
+  font: 400 26px Sans-serif;
+  position:fixed;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  top:60;
+  left:0;
+  width:50px;
+  max-height:150%;
+  margin:0;
+  background:rgba(255,255,255,0.7);
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(0px);
+  transform-origin:right top;
+  list-style-type: none
+}
+.horizontal-scroll-wrapper > div{
+  display:block;
+  padding:10px;
+  transform:rotate(90deg);
+  transform-origin: right top;
+}
 
-  .div-horizontal-scroll {
-  overflow-x: auto;
-  overflow-y: hidden;
+
+.squares{
+  padding:10px 0 0 0;
+}
+
+.squares > div{
+  width:100%;
+  height:10%;
+  margin:0px;
+}
+
+.rectangles{
+  top:100px;
+  padding:20px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:50px 10px;
+  padding:5px;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+  
 }
     section {
     width: 100%;
@@ -46,7 +95,7 @@
   
   nav > ul {
     width: 100%;
-    padding: 16px 0;
+    padding: 16px;
     display: flex;
     justify-content: flex-end;
   }
@@ -99,6 +148,10 @@
     font-size: 12px;   
     }
   @media only screen and (max-device-width: 480px) {
+    .horizontal-scroll-wrapper{
+    height:50%;
+    top: 90px;
+    }
     section {
     top: 140px;
     }
@@ -875,17 +928,13 @@ function tableSearch() {
         </tr>
     </table>
     </section>   
-    <div class="div-horizontal-scroll">
-    <nav> 
-    <ul> 
-    <li><a href="#top">20</a></li> <li><a href="#two">21</a></li> <li><a href="#three">22</a></li> <li><a href="#four">23</a></li> <li><a href="#five">24</a></li> 
-    <li><a href="#top">25</a></li> <li><a href="#two">26</a></li> <li><a href="#three">27</a></li> <li><a href="#four">28</a></li> <li><a href="#five">30</a></li> 
-    <li><a href="#top">31</a></li> <li><a href="#two">32</a></li> <li><a href="#three">33</a></li> <li><a href="#four">34</a></li> <li><a href="#five">35</a></li> 
-    <li><a href="#top">36</a></li> <li><a href="#two">37</a></li> <li><a href="#three">38</a></li> <li><a href="#four">39</a></li> <li><a href="#five">40</a></li> 
-    <li><a href="#top">41</a></li> <li><a href="#two">42</a></li> <li><a href="#three">43</a></li> <li><a href="#four">44</a></li> <li><a href="#five">45</a></li> 
-    <li><a href="#top">46</a></li> <li><a href="#two">47</a></li> <li><a href="#three">48</a></li> <li><a href="#four">49</a></li> 
-    </ul> 
-    </nav>
+    <div class="horizontal-scroll-wrapper squares">   
+    <div><li><a href="#top">20</a></li></div> <div><li><a href="#two">21</a></li></div> <div><li><a href="#three">22</a></li></div> <div><li><a href="#four">23</a></li></div> <div><li><a href="#five">24</a></li></div> 
+    <div><li><a href="#top">25</a></li></div> <div><li><a href="#two">26</a></li></div> <div><li><a href="#three">27</a></li></div> <div><li><a href="#four">28</a></li></div> <div><li><a href="#five">30</a></li></div> 
+    <div><li><a href="#top">31</a></li></div> <div><li><a href="#two">32</a></li></div> <div><li><a href="#three">33</a></li></div> <div><li><a href="#four">34</a></li></div> <div><li><a href="#five">35</a></li></div> 
+    <div><li><a href="#top">36</a></li></div> <div><li><a href="#two">37</a></li></div> <div><li><a href="#three">38</a></li></div> <div><li><a href="#four">39</a></li></div> <div><li><a href="#five">40</a></li></div> 
+    <div><li><a href="#top">41</a></li></div> <div><li><a href="#two">42</a></li></div> <div><li><a href="#three">43</a></li></div> <div><li><a href="#four">44</a></li></div> <div><li><a href="#five">45</a></li></div> 
+    <div><li><a href="#top">46</a></li></div> <div><li><a href="#two">47</a></li></div> <div><li><a href="#three">48</a></li></div> <div><li><a href="#four">49</a></li></div> 
     </div>
 </main> 
 
