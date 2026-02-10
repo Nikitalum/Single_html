@@ -39,7 +39,8 @@ div{
   overflow-x:hidden;
   transform:rotate(-90deg) translateY(0px);
   transform-origin:right top;
-  list-style-type: none
+  list-style-type: none;
+  transition: 0.5s;
 }
 .horizontal-scroll-wrapper > div{
   display:block;
@@ -48,7 +49,39 @@ div{
   transform:rotate(90deg);
   transform-origin: left bottom;
 }
+.horizontal-scroll-wrapper .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
+.openbtn {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(80,150,255,0.7);
+  color: white;
+  padding: 4px 12px;
+  border: none;
+}
+
+.closebtn {
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgba(80,150,255,0.7);
+  color: white;
+  padding: 4px 12px;
+  border: none;
+}
+
+.openbtn:hover{
+  background-color: rgba(13, 43, 87, 0.7);;
+}
+
+.closebtn:hover{
+  background-color: rgba(13, 43, 87, 0.7);;
+}
 
 .squares{
   top: 45px;
@@ -80,7 +113,7 @@ div{
     position: absolute;
     top: 0;
   }
-  
+ 
   nav2 {
     width: 100%;
     height: 30px;
@@ -115,7 +148,7 @@ div{
   nav > ul > li > a:hover {
     text-decoration: underline;
   }
-  
+
   section {
     top:110px;
     display: flex;
@@ -193,6 +226,12 @@ div{
     height: 50px; 
     font-size: 28px;   
     }
+    .openbtn {
+        font-size: 24px;
+    }
+    .closebtn {
+        font-size: 38px;
+    }
   }
 
     </style>
@@ -218,9 +257,20 @@ function tableSearch() {
 
     }
 }
+function openNav() {
+  document.getElementById("mySidepanel").style.top = "-50px";
+}
+function closeNav() {
+
+  document.getElementById("mySidepanel").style.top = "5%";
+}
 </script>
-    <section>
-    <nav2><h4>Поиск по таблице</h4><input class="form-control" type="text" placeholder="Фамилия или телефон" id="search-text" onkeyup="tableSearch()"> </nav2>
+        <div style="position: fixed; height:980px"></div>   
+    <section><hr>
+    <nav2><h4>Поиск по таблице</h4><input class="form-control" type="text" placeholder="Фамилия или телефон" id="search-text" onkeyup="tableSearch()"> 
+    <button class="openbtn" onclick="openNav()">&#9776; Скрыть панель </button>
+    <button class="closebtn" onclick="closeNav()">&dArr;</button>
+    </nav2>
     <table class="table table-striped" id="info-table" , border="1"><caption>Информация об абонентах</caption>
         <section id="2-0">
         <tr>
@@ -3886,7 +3936,7 @@ function tableSearch() {
         </section>
     </table>
     </section>   
-    <div class="horizontal-scroll-wrapper squares">   
+    <div id="mySidepanel" class="horizontal-scroll-wrapper squares">          
     <div><li><a href="#top">20</a></li></div> <div><li><a href="#21">21</a></li></div> <div><li><a href="#22">22</a></li></div> <div><li><a href="#23">23</a></li></div> <div><li><a href="#24">24</a></li></div> 
     <div><li><a href="#25">25</a></li></div> <div><li><a href="#26">26</a></li></div> <div><li><a href="#27">27</a></li></div> <div><li><a href="#28">28</a></li></div> <div><li><a href="#30">30</a></li></div> 
     <div><li><a href="#31">31</a></li></div> <div><li><a href="#32">32</a></li></div> <div><li><a href="#33">33</a></li></div> <div><li><a href="#34">34</a></li></div> <div><li><a href="#39">35</a></li></div> 
